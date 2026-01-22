@@ -127,3 +127,9 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+CREATE_SUPERUSER = os.getenv("CREATE_SUPERUSER", "False") == "True"
+DJANGO_SU_NAME = os.getenv("DJANGO_SU_NAME")
+DJANGO_SU_EMAIL = os.getenv("DJANGO_SU_EMAIL")
+DJANGO_SU_PASSWORD = os.getenv("DJANGO_SU_PASSWORD")
